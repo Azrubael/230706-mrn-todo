@@ -22,7 +22,8 @@ The frontend - with React.js v18.
 
 [4] - First time you have to generate MongoDB container
 ```bash
-   $ docker run --network todo-net --name mongodb -d mongo
+   $ docker run --name mongodb --network todo-net -d -v data:/data/db mongo
+   $ docker stop mongodb
 ```
 
 [5] - To start Todo second and other times
