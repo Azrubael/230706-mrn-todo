@@ -1,4 +1,4 @@
-A Todo sample application implemented by containerizing the three parts.
+A Todo simple application implemented by containerizing the three parts.
 The backend is implemented using Mongo DBMS v6 and Node.js v18.
 The frontend - with React.js v18.
 
