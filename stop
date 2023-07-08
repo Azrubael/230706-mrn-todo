@@ -1,0 +1,7 @@
+echo "List of stopped containers:"
+docker stop uh-frontend-todo
+docker stop uh-node-ip
+docker stop mongodb
+echo "--------------------------------------------"
+echo "Check of all available containers:"
+docker ps -a

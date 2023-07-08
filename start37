@@ -1,0 +1,5 @@
+docker run --network todo-net --rm --name mongodb -d mongo
+docker run --network todo-net --rm --name uh-node-ip -d\
+    -p 8000:8000 uh-todoapp-ip:mon1
+docker run --rm -p 3000:3000 --name uh-frontend-todo\
+    -it uh-frontend:ls37
