@@ -26,13 +26,13 @@ The frontend - with React.js v18.
     $ ./start37
 ```
 `The explanation:`
-
+```bash
 docker run --network todo-net --rm --name mongodb -d mongo
 docker run --network todo-net --rm --name uh-node-ip -d\
     -p 8000:8000 uh-todoapp-ip:mon1
 docker run --rm -p 3000:3000 --name uh-frontend-todo\
     -it uh-frontend:ls37
-
+```
 
 [5] - To stop Todo
 ```bash
@@ -40,7 +40,7 @@ docker run --rm -p 3000:3000 --name uh-frontend-todo\
     $ ./stop
 ```
 `The explanation:`
-
+```bash
 echo "List of stopped containers:"
 docker stop uh-frontend-todo
 docker stop uh-node-ip
@@ -48,3 +48,4 @@ docker stop mongodb
 echo "--------------------------------------------"
 echo "Check of all available containers:"
 docker ps -a
+```
