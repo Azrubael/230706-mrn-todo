@@ -1,5 +1,5 @@
 echo "List of stopped containers:"
-docker stop uh-frontend-todo
+docker stop uh-react-todo
 docker stop uh-node-ip
 docker stop mongodb
 echo "--------------------------------------------"

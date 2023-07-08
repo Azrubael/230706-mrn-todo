@@ -20,21 +20,26 @@ The frontend - with React.js v18.
 
 ```
 
-[4] - To start Todo
+[4] - First time you have to generate MongoDB container
+```bash
+   $ docker run --network todo-net --name mongodb -d mongo
+```
+
+[5] - To start Todo second and other times
 ```bash
     $ cd ./230706-todo
-    $ ./start37
+    $ ./start
 ```
 `The explanation:`
 ```bash
-docker run --network todo-net --rm --name mongodb -d mongo
+docker container start mongodb
 docker run --network todo-net --rm --name uh-node-ip -d\
     -p 8000:8000 uh-todoapp-ip:mon1
-docker run --rm -p 3000:3000 --name uh-frontend-todo\
-    -it uh-frontend:ls37
+docker run --name uh-react-todo -it --rm -p 3000:3000\
+    -v $(pwd)/frontend/src:/app/src uh-frontend
 ```
 
-[5] - To stop Todo
+[6] - To stop Todo
 ```bash
     $ cd ./230706-todo
     $ ./stop
@@ -42,10 +47,14 @@ docker run --rm -p 3000:3000 --name uh-frontend-todo\
 `The explanation:`
 ```bash
 echo "List of stopped containers:"
-docker stop uh-frontend-todo
+docker stop uh-react-todo
 docker stop uh-node-ip
 docker stop mongodb
 echo "--------------------------------------------"
 echo "Check of all available containers:"
 docker ps -a
 ```
+
+[7] - Launch a web-application Todo in developmen mode in a browser
+
+# http://localhost:3000
