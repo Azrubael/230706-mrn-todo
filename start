@@ -1,4 +1,5 @@
 docker container start mongodb
 docker run --network todo-net --rm --name uh-node-ip -d\
-    -p 8000:8000 uh-todoapp-ip:mon1
-docker run --name uh-react-todo -it --rm -p 3000:3000 -v $(pwd)/frontend/src:/app/src uh-frontend
+    -p 8000:8000 -v $(pwd)/backend/src:/app/src uh-todoapp-ip:mon1
+docker run --name uh-react-todo -it --rm -p 3000:3000\
+    -v $(pwd)/frontend/src:/app/src uh-frontend
